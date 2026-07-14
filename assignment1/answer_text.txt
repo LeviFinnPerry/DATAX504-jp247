@@ -1,5 +1,5 @@
 GitHub repository URL: https://github.com/LeviFinnPerry/DATAX504-jp247 
 Final training loss (4 d.p.): 0.0000 
 Total trainable parameters: 0 
-OpenCode model/provider used: e.g. OpenCode + Ollama qwen2.5-coder:7b 
+OpenCode model/provider used: e.g. OpenCode + Ollama qwen3.5:2b 
 Reflection (max 250 words): [Your reflection here]
