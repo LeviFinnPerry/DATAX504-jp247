@@ -1,0 +1,5 @@
+# Ignore directories
+.dist
+
+# Ignore lecture materials
+lectures/
