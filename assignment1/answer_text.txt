@@ -1,5 +1,18 @@
 GitHub repository URL: https://github.com/LeviFinnPerry/DATAX504-jp247 
-Final training loss (4 d.p.): 0.0000 
-Total trainable parameters: 0 
+Final training loss (4 d.p.): 0.309344
+Total trainable parameters: 65
 OpenCode model/provider used: e.g. OpenCode + Ollama qwen3.5:2b 
-Reflection (max 250 words): [Your reflection here]
+Reflection (max 250 words): 
+I used opencode to connect the ollama model locally. It requires a paid subsription to use it over the API. 
+So instead with the help of the Big Pickle model I managed to set up a json file that connects to ollama model qwen2.5-coder:7b. 
+This ended up being too large for my RAM so I moved again to qwen3:1.7b.
+
+Initially I recieved an error from the forward propagation as the dimensions missmatched. 
+So I used to model to determine that I had made an error in the order of the sizes, 
+I had accientally created a 3D grid instead of a 2D grid so the shape of the parameters created an error. 
+I also made a small error where I tried to retrieve A1 and A2 from the cache at once rather than seperately, 
+which required multiple iterations of conversation to identify the error.
+
+The primary issue I am having with opencode is during planning it will often disregard my prompt 
+and replaces it with the "do not edit" system prompt. 
+This requires starting a new "chat" each time as there is no going back from the model reading its own instructions as prompts.
